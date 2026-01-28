@@ -67,19 +67,138 @@
 
 // Strings 
 
-let firstName = "John"
-let course = 'JavaScript'
+// let firstName = "John"
+// let course = 'JavaScript'
 
-firstName.length
-firstName.toUpperCase()
-firstName.toLowerCase()
-firstName.includes("o")
+// firstName.length
+// firstName.toUpperCase()
+// firstName.toLowerCase()
+// firstName.includes("o")
 
-// Template Literals
+// // Template Literals
 
-let message = `Hello ${firstName}, welcome to ${course}`
-console.log(message)
+// let message = `Hello ${firstName}, welcome to ${course}`
+// console.log(message)
 
-let a = 20, b = 30
-let result = `The sum of ${a} and ${b} is ${a + b}`
-console.log(result)
+// let a = 20, b = 30
+// let result = `The sum of ${a} and ${b} is ${a + b}`
+// console.log(result)
+
+// Scope of variables
+
+// let a = 20
+// {
+//     var b = 30 // global scope
+//     console.log(a) // 20
+// }
+// console.log(b)
+
+// hoisting
+// console.log(c)
+// var c = 40 // undefined
+// console.log(c) // 40
+
+// console.log(a)
+// let a = 20
+// console.log(a)
+
+// console.log(b)
+// const b = 30
+// console.log(b)
+
+// Parse function inside a function in java
+// for(let i = 2; i <= 20; i += 2) {
+//     console.log(i)
+// }
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// for(let i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i])
+// }
+
+// numbers.forEach((number, index) => {
+//     console.log(number,",", index)
+// })
+
+// let student = {
+//     name: "John",
+//     age: 20,
+//     city: "New York"
+// }
+// for(let key in student) {
+//     console.log(key,",", student[key])
+// }
+
+// student.forEach(function(key, value) {
+//     console.log(key,",", value)
+// })
+
+// function add(a, b) {
+//     return a + b
+// }
+// let result = add(10, 20)
+// console.log(result)
+
+// let subtract = function(a, b) {
+//     console.log(a - b)
+//     return a - b
+// }
+
+// subtract(10, 20)
+
+// // arrow function
+// let s = (a,b) => {return a-b}
+
+
+// let square = x => x * x;
+
+// console.log(square(4))
+
+// IIFE - Immediately Invoked Function Expression
+// (function(params) {
+//     console.log("Hello "+ params)
+// })("Ankit");
+
+// let a =  { b : 10 }
+// let b = a
+// b.b = 5;
+
+// console.log(a)
+
+// let person = {
+//     name : "Amit",
+//     greet : function() {
+//         console.log("Hello "+ name)
+//     }
+// }
+// name = "IWBSdhb"
+
+// person.greet()
+
+let person = {
+    name : "Amit",
+    address : {
+        city : "New York",
+        state : "NY"
+    }
+}
+
+for(let key in person) {
+    if(typeof person[key] === "object") {
+        for(let key2 in person[key]) {
+            console.log(key2,",", person[key][key2])
+        }
+    } else {
+        console.log(key,",", person[key])
+    }
+}
+
+// Arrays
+let a = [1, 2, 3, 4, 5]
+
+let a1 = ["Amit", "John", "Jane", "Jim", "Jill"]
+
+a1.push("Ankit")
+a.push("Ankit")
+console.log(a)
+console.log(a1)
